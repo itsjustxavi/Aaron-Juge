@@ -97,7 +97,6 @@
                 let typeNotifier = document.getElementById("typeNotifier");
                 let chatBox = document.getElementById("chatBox");
                 let message = input.value;
-                console.log(input.innerHTML);
                 let newMessageBox = document.createElement('div');
                 newMessageBox.classList.add("container");
                 newMessageBox.innerHTML = `
@@ -108,7 +107,6 @@
                 if (event.keyCode === 13) {
                     event.preventDefault();
                     chatBox.appendChild(newMessageBox);
-                    console.log(input);
                     input.value = " ";
                      typeNotifier.style.display = "block";
                     message = message.toString();
