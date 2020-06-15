@@ -52,11 +52,40 @@
         
         </div>
         <div>
-                <p id="typeNotifier" style="display: none;">Zack is typing...</p>
-                <textarea id="userInput" rows="4" cols="190" placeholder="Type here to send message To Zack Hample"></textarea>
+                <p id="typeNotifier" style="display: none;">Aaron Juge is typing...</p>
+                <textarea id="userInput" rows="4" cols="190" placeholder="Type here to send message To Aaron Juge"></textarea>
                 <button style="display: none;" id="myBtn" onclick="javascript:alert('Hello World!')">Button</button>
         </div>  
         <script>
+    function grabtime(){
+        var d = new Date();
+        let type;
+        let hours = d.getHours();
+        let minuts = d.getMinutes().toString();
+        
+        
+        if(hours > 12){
+            hours = hours - 12;
+            type = "PM"
+        }else{
+            type = "AM"
+        }
+        
+        if(minuts.length == 1){
+         minuts = `0${minuts}`   
+        }
+        
+        
+        
+        
+        
+        return `${hours}:${minuts} ${type}`
+    }    
+            
+            
+           
+            
+            
             function random(items){
                 var item = items[Math.floor(Math.random() * items.length)]; 
                 return item;
@@ -72,9 +101,9 @@
                 let newMessageBox = document.createElement('div');
                 newMessageBox.classList.add("container");
                 newMessageBox.innerHTML = `
-                    <img src="/w3images/bandmember.jpg" alt="Avatar">
+                    <img src="meadia/xavi.jpg" alt="Avatar">
                     <p>${message}</p>
-                    <span class="time-right">11:02</span>
+                    <span class="time-right">${grabtime()}</span>
                     `;
                 if (event.keyCode === 13) {
                     event.preventDefault();
@@ -82,33 +111,71 @@
                     console.log(input);
                     input.value = " ";
                      typeNotifier.style.display = "block";
-                    message = message.twostring();
+                    message = message.toString();
                     message = message.replace(/(\r\n|\n|\r)/gm, "");
                     message = message.toLocaleLowerCase();
-                    console.log(message.toString === "What is your favorite color?");
-                    console.log(typeof message);
-                    console.log("Hello");
-                    x = "What is your favorite color?"
-                   message = String(message);
-                    if (message. == "How are you?") {
-                        text = "I'm pretty level headed since I'm a computer program.";
-                    }else if (message.includes == "What is your favorite color?"){
+                    
+                    
+                    
+                
+                    if (message.includes("hello") ) {
+                        text = "Hi.";
+                    }else if (message.includes("best yankee?")){
+                       text = "Gerrit Cole!"; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "Yes."; 
+                    }else if (message.includes("like memes?")){
+                       text = "Yup."; 
+                    }else if (message.includes("anime?")){
+                       text = "Best Thing Ever."; 
+                    }else if (message.includes("hobby?")){
+                       text = "My fundation."; 
+                    }else if (message.includes("52 homeruns?")){
+                       text = "Amazing. It's really cool."; 
+                    }else if (message.includes("cole")){
+                       text = "He's is good. He's throwing really hard."; 
+                    }else if (message.includes("yankee's fan?")){
+                       text = "A big one. Even thogh i lived in california."; 
+                    }else if (message.includes("look up to?")){
+                       text = "My family. They are amazing."; 
+                    }else if (message.includes("What is your favorite color?")){
                        text = "All of 'em."; 
-                    }else if(message.includes = "best yankee?"){
-                        text = "gerrit cole!"    
-                    }else{
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }
+                    else{
                         text = "Mmmm. My responses are limited. Looking forward to the Weekend.";
                     }
-                    console.log(message);
-                    console.log(text);
+                   
+                    
+                    
+
                     setTimeout(function(){ 
                         let newaIResponse = document.createElement('div');
                         newaIResponse.classList.add("container");
                         newaIResponse.classList.add("darker");
                         newaIResponse.innerHTML = `
-                        <img src="/w3images/bandmember.jpg" alt="Avatar">
+                        <img src="meadia/Aaronj.jpg" alt="Avatar">
                         <p>${text}</p>
-                        <span class="time-right">11:02</span>
+                        <span class="time-right">${grabtime()}</span>
                         `;
                         chatBox.appendChild(newaIResponse);
                         typeNotifier.style.display = "none";
